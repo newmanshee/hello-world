@@ -1,4 +1,3 @@
-* ASCII text, with CRLF line terminators
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
