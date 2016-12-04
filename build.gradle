@@ -1,6 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'jacoco'
+
 
 sourceCompatibility = 1.7
 version = '1.0'
@@ -15,43 +15,32 @@ repositories {
     mavenCentral()
 }
 
+
+apply plugin: "jacoco"
+
 jacoco {
-    toolVersion = "0.7.6.201602180812"
-    reportsDir = file("$buildDir/customJacocoReportDir")
+	toolVersion = "0.7.6.201602180812"
+	}
+
+
+jacocoTestReport {
+	group = "Reporting"
+	description = "Generate JaCoCo code coverage reports after running tests"
+	reports {
+		xml.enabled true
+		html.destination "${buildDir}/jacocoHTML"
+	}
 }
 
-subprojects {
-    apply plugin: 'java'
-
-    dependencies {
-        testCompile 'junit:junit:4.11'
-    }
-
-    jacocoTestReport {
-        reports {
-            html.enabled = true
-            xml.enabled = true
-            csv.enabled = false
-        }
-    }
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
 test {
     systemProperties 'property': 'value'
+    
 }
 
-task jacocoRootReport(type: org.gradle.testing.jacoco.tasks.JacocoReport) {
-    dependsOn = subprojects.test
-    sourceDirectories = files(subprojects.sourceSets.main.allSource.srcDirs)
-    classDirectories =  files(subprojects.sourceSets.main.output)
-    executionData = files(subprojects.jacocoTestReport.executionData)
-    reports {
-        html.enabled = true
-        xml.enabled = true
-        csv.enabled = false
-        xml.destination = "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
-    }
-}
 
 buildscript {
   repositories {
