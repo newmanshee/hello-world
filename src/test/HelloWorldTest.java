@@ -26,7 +26,7 @@ public class HelloWorldTest {
     @Test
     public void testGetMessage() 
     {
-      assertEquals(HelloWorld.MESSAGE, HelloWorld.getMessage());
+      assertEquals(HelloWorld.MESSAGE, new HelloWorld().getMessage());
     }
 
 
