@@ -31,3 +31,13 @@ test {
     systemProperties 'property': 'value'
 }
 
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:1.0.2'
+  }
+}
+
+apply plugin: 'com.github.kt3k.coveralls'
