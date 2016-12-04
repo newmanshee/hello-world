@@ -1,4 +1,4 @@
 language: java
-script: gradle -d jacocoTestReport 
+script: gradle jacocoTestReport 
 after_success:
   - gradle coveralls
