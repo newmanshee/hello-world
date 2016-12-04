@@ -4,7 +4,8 @@ public class HelloWorld
   
   public static void main(String[] argv)
   {
-    System.out.println(getMessage());
+    HelloWorld hw = new HelloWorld();
+    System.out.println(hw.getMessage());
   }
   
   public String getMessage()
