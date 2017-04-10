@@ -1,3 +1,5 @@
+package test;
+
 public class HelloWorld
 {
   public static final String MESSAGE = "Hello World";
