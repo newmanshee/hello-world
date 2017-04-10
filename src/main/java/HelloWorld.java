@@ -1,7 +1,7 @@
 public class HelloWorld
 {
   public static final String MESSAGE = "Hello World";
-  build BREAK!
+
   public static void main(String[] argv)
   {
     HelloWorld hw = new HelloWorld();
