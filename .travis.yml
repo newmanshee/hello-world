@@ -1,4 +1,5 @@
 language: java
-script: gradle -v build test jacocoTestReport 
+install: gradle -v build
+script: gradle test jacocoTestReport 
 after_success:
   - gradle coveralls
