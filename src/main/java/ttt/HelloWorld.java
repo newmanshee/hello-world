@@ -1,4 +1,4 @@
-package test;
+package ttt;
 
 public class HelloWorld
 {
