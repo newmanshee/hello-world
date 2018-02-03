@@ -2,8 +2,9 @@ language: java
 install: gradle -v build
 script: gradle build
 #script: gradle build test jacocoTestReport 
-before_deploy:
+#before_deploy:
   # Set up git user name and tag this commit
+after_success:
   - git config --local user.name "newmanshee"
   - git config --local user.email "newman_shee@hotmail.com"
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
