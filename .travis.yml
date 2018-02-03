@@ -14,5 +14,4 @@ deploy:
   on:
     tags: true
 script: gradle test jacocoTestReport 
-after_success:
-  - gradle coveralls
+
