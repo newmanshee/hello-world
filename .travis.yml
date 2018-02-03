@@ -11,8 +11,6 @@ after_success:
   - git push origin --tags
 deploy:
   provider: releases
-  api_key:
-    secure: d118f1296f25f9b06eb9ab430833f8e0f4c5d127
   file: build/libs/hello-world-1.0.jar
   skip_cleanup: true 
   on:
