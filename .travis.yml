@@ -1,5 +1,13 @@
 language: java
 install: gradle -v build
+deploy:
+  provider: releases
+  api_key:
+    secure: d7af1af80328aa341e580da15bbf681ac1e21565
+  file: build/libs/hello-world-1.0.jar
+  skip_cleanup: true
+  on:
+    tags: true
 script: gradle test jacocoTestReport 
 after_success:
   - gradle coveralls
