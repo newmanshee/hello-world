@@ -12,7 +12,7 @@ after_success:
 deploy:
   provider: releases
   api_key:
-    secure: d7af1af80328aa341e580da15bbf681ac1e21565
+    secure: d118f1296f25f9b06eb9ab430833f8e0f4c5d127
   file: build/libs/hello-world-1.0.jar
   skip_cleanup: true 
   on:
