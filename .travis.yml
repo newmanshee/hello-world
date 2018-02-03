@@ -9,6 +9,8 @@ deploy:
   file: build/libs/hello-world-1.0.jar
   on:
     repo: newmanshee/hello-world
+    tags: true
+    all_branches: true
 env:
   global:
     secure: OuuYJjprVRK1ZyxsL4bcWr4z2RxneuHBjOWjiZPvGQHHK3yn5kSWxmUErAOU47QdoTcM0ojVCfig0HGUqk+IwaHQmFqpWcR8N0JkijDinRM9Cc34uub4HBZEOoXqL0JYcWUm29IDiBn6ets8rXuFzoXYPvoMd1amdjfvVI7YNTkiBeumQUwHdeadA+F5a1YdX/HflBHYof90b44GlraSvW+2R+x7ErHBnX94+41v8N6yb6mJz7QceWVK0qLUj0mzVFC2TTivySDyT7ikoEdi3omDagldabsmAJM/jo885hF1yAz4/guDhWpUrcjHCHYI0cL5youynmbrmj7LecsgvrTXGl1ScYvngKZTU6T5G49g4qNO0dT/9gJMS3cnPay8AGXnTFQLUFE5sANi4bjdCWjNUylGPgm5Bwd3TBT4NJ+bZ3Bs3aNNhTibJUSz6m7dyS+Z94qgqor14mydO2gJmEyVbyRy4oza2gxSItbus9RtayupKc8NsJfgDT56opiswDk5oxEWJK2FLvh5G5bBxNkkXmFRGxv7TypOMLe9nPMcpETVIdFP7YVu8OTH6OPkuyT7J2SqrVT7kgiQ/RlOpTZXyQ9EmYW76jcWDkaAHs8pLoFoNRC5NlCA8mwKS701/Ft1ubueLvevm63PIQOWlUIqXGZws0L9uEHKgnvOS+E=
