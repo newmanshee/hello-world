@@ -1,5 +1,7 @@
 language: java
 install: gradle -v build
+script: gradle build
+#test jacocoTestReport 
 before_deploy:
   # Set up git user name and tag this commit
   - git config --local user.name "newmanshee"
@@ -13,5 +15,4 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-script: gradle test jacocoTestReport 
 
