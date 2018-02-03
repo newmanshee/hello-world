@@ -1,6 +1,11 @@
 language: java
 install: gradle -v build
 script: gradle build
+before_deploy:
+# Set up git user name and tag this commit
+  - git config --local user.name "newmanshee"
+  - git config --local user.email "newman_shee@hotmail.com"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
   skip_cleanup: true
   provider: releases
